@@ -7,14 +7,13 @@
 ## сборка
 
 ### зависимости
-
-- java 17
+перед сборкой установить java 17
 
 ```
 .\gradlew.bat clean shadowJar
 ```
 
-проект использует composite build и вызывает локальный gradle wrapper из исходников `transferproxy`.
+проект использует composite build и вызывает локальный gradle wrapper из исходников `TransferProxy`.
 
 ## установка
 
