@@ -29,5 +29,5 @@ processResources {
 }
 
 jar {
-    archiveBaseName = 'TransferProxy-LANBroadcaster'
+    archiveBaseName = 'LANBroadcaster'
 }
