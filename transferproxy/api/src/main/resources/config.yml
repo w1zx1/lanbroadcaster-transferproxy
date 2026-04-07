@@ -1,0 +1,67 @@
+# TransferProxy configuration file
+# If you have any questions or issues, feel free to create an issue here:
+# https://github.com/YvanMazy/TransferProxy/issues
+
+network:
+  bind-address: "0.0.0.0"
+  bind-port: 25565
+  # Sets the netty resource leak detection level. 'DISABLED' turns it off for performance.
+  resource-leak-detector-level: "DISABLED"
+  # Enables 'epoll' for enhanced network performance on Linux-based systems.
+  use-epoll: true
+  # Number of threads for handling new network connections.
+  boss-threads: 1
+  # Number of threads for handling ongoing network activity.
+  worker-threads: 3
+  # Disables Nagle's algorithm if set to true. False can increase latency but reduce network chatter.
+  use-tcp-no-delay: false
+  # Disables verification of extra byte in packets sent by the player.
+  # When this happens, the player is disconnected immediately.
+  # Only turn it on if you know what you are doing.
+  disable-extra-byte-check: false
+
+status:
+  # Server name displayed in server list.
+  name: "TransferProxy"
+  # Server description (MiniMessage supported)
+  # Documentation available here: https://docs.advntr.dev/minimessage/format.html
+  description: "<green>A TransferProxy server"
+  # Sets server protocol version. 'AUTO' automatically matches client's version.
+  # You can also directly specify the protocol number, such as 766.
+  protocol: "AUTO"
+  # Displayed number of online players.
+  # To display a real number of online players, here is the documentation:
+  # https://github.com/YvanMazy/TransferProxy/wiki/Display-the-correct-number-of-online-players
+  online: -1
+  # Displayed maximum number of online players.
+  # This value is only used for display and has no real effect.
+  max-online: -1
+  # The path of the file corresponding to the favicon to display.
+  # If the file is not found, nothing will be displayed.
+  favicon-path: "./favicon.png"
+
+miscellaneous:
+  # Enables kicking players with outdated Minecraft versions.
+  kick-old-protocol: true
+  # Message displayed to players kicked for outdated client version. (MiniMessage supported)
+  kick-old-protocol-message: "<red>Outdated client"
+  # Automatically send keep-alive packets to players in CONFIG state.
+  # Useful if you make the player wait for a long time.
+  keep-alive: false
+  # Interval between each sending. (In milliseconds)
+  keep-alive-delay: 5000
+
+logging:
+  # Enable logging of connection establishment events.
+  log-connect: true
+  # Enable logging of connection disconnect events.
+  log-disconnect: true
+  # Enable logging of connection timeout events.
+  log-timeout: true
+  # Enable logging when a disconnection is caused by an exception.
+  log-disconnect-for-exception: true
+  # Enable logging of connection transfer events to another server.
+  log-transfer: true
+  # Displays the full exception when a connection is terminated by an exception.
+  # Only works when the "log-disconnect-for-exception" option is enabled.
+  log-complete-disconnect-exception: false

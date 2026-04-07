@@ -1,0 +1,5 @@
+name: LANBroadcaster
+author: w1zx1
+version: ${version}
+description: lanbroadcaster's port for transferproxy
+main: net.w1zx1.lanbroadcaster.LANBroadcasterPlugin
