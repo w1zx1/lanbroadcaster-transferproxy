@@ -1,20 +1,25 @@
-# TransferProxy LANBroadcaster
+﻿# LANBroadcaster (для TransferProxy)
 
-`TransferProxy LANBroadcaster` is a standalone plugin for `TransferProxy` that broadcasts the proxy over Minecraft LAN discovery.
+порт [4drian3d/LANBroadcaster](https://github.com/4drian3d/LANBroadcaster) для [TransferProxy](https://github.com/YvanMazy/TransferProxy)
 
-It periodically sends the standard LAN advertisement payload to `224.0.2.60:4445` using the proxy bind port from the active `TransferProxy` configuration.
+плагин периодически отправляет стандартный lan-пакет на `224.0.2.60:4445` и использует порт из текущей конфигурации `TransferProxy`
 
-## Build
+## сборка
 
-From this folder:
+### зависимости
 
-```powershell
-.\gradlew.bat jar
+- java 17
+
+```
+.\gradlew.bat clean shadowJar
 ```
 
-This project uses a composite build and delegates to the existing Gradle wrapper from the local `TransferProxy` sources.
+проект использует composite build и вызывает локальный gradle wrapper из исходников `transferproxy`
 
-## Install
+## установка
 
-Copy `build/libs/TransferProxy-LANBroadcaster-<version>.jar` into the `TransferProxy` `plugins/` directory.
+скопировать `build/libs/LANBroadcaster-<version>.jar` в папку `plugins/`
 
+## примечания
+
+RGB-цвета и градиенты из MiniMessage могут отображаться упрощенно
