@@ -1,6 +1,8 @@
 package net.w1zx1.lanbroadcaster;
 
+import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import net.transferproxy.api.TransferProxy;
 
 import java.util.concurrent.CompletableFuture;
@@ -15,8 +17,8 @@ final class TransferProxyMOTDProvider implements MOTDProvider {
                     .getConfiguration()
                     .getStatus()
                     .getDescription();
-            return MiniMessage.miniMessage().stripTags(configuredDescription);
+            final Component component = MiniMessage.miniMessage().deserialize(configuredDescription);
+            return LegacyComponentSerializer.legacySection().serialize(component);
         }, executor);
     }
 }
-
