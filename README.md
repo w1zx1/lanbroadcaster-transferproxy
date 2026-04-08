@@ -2,7 +2,7 @@
 
 ### порт [4drian3d/LANBroadcaster](https://github.com/4drian3d/LANBroadcaster) для [TransferProxy](https://github.com/YvanMazy/TransferProxy)
 
-плагин периодически отправляет стандартный lan-пакет на `224.0.2.60:4445` и использует порт из текущей конфигурации `TransferProxy`.
+плагин периодически отправляет стандартный lan-пакет на `224.0.2.60:4445`; использует порт и motd из текущей конфигурации `TransferProxy`.
 
 ## сборка
 
