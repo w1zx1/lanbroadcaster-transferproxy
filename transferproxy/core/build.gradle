@@ -71,7 +71,6 @@ testing {
 
 def integrationJavaToolchain = {
     languageVersion = JavaLanguageVersion.of(21)
-    vendor = java.toolchain.vendor
 }
 
 integrationTest {
