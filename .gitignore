@@ -2,3 +2,5 @@
 build/
 references/
 test-env/
+
+.codex
